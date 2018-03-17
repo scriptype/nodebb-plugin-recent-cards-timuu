@@ -12,20 +12,21 @@
 
 				<div class="recent-card">
 					<div class="bg"></div>
-          <a
-            href="{config.relative_path}/topic/{topics.slug}"
-            itemprop="url"
-            class="recent-card-link"
-          ></a>
 					<div class="topic-info">
 						<h2 class="description">
-              <span style="background-image: url(/assets/uploads/category/category-{topics.category.cid}.jpg), url(/assets/uploads/system/site-logo.png)" class="category-icon"></span>
-              {topics.category.name}
+              <a href="{config.relative_path}/category/{topics.category.slug}" itemprop="url">
+                <span style="background-image: url(/assets/uploads/category/category-{topics.category.cid}.jpg), url(/assets/uploads/system/site-logo.png)" class="category-icon"></span>
+                {topics.category.name}
+              </a>
             </h2>
-						<h4 class="h4 topic-info-title" itemprop="description">{topics.title}</h4>
+              <h4 class="h4 topic-info-title" itemprop="description">
+                <a href="{config.relative_path}/topic/{topics.slug}" itemprop="url">
+                  {topics.title}
+                </a>
+              </h4>
 					</div>
           <div class="topic-card-author">
-            <a href={config.relative_path}/user/{topics.user.userslug}"">
+            <a href="{config.relative_path}/user/{topics.user.userslug}">
               <!-- IF ../user.picture -->
               <span
                 class="user-img topic-card-author-avatar"
