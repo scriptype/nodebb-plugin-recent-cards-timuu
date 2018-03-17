@@ -1,77 +1,108 @@
 .recent-cards {
-	list-style-type: none;
-	padding: 0;
+    list-style-type: none;
+    padding: 0;
+    margin-left: -5px;
+    margin-right: -5px;
 
-	.recent-card {
-		.pointer;
-		height: 110px;
-		width: 100%;
-		padding: 10px;
-		position: relative;
+    &-item {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
-		margin-bottom: 10px;
+    .recent-card {
+        .pointer;
+        height: 220px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 10px;
 
-		.bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-position: 50% 50%;
-			background-size: cover;
+        a {
+            color: #000 !important;
+        }
 
-			&:hover {
-				filter: brightness(115%);
-				-webkit-filter: brightness(115%);
-			}
-		}
+        &-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-		.topic-info {
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			pointer-events: none;
-			padding-right: 15px;
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 10px;
+        }
 
-			width: 100%;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-			overflow: hidden;
+        .topic-info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            height: 130px;
+            pointer-events: none;
+            padding-right: 15px;
+            overflow: hidden;
 
-			.description {
-				width: 100%;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				overflow: hidden;
+            .description {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 40px;
+                margin: 0;
+                margin-bottom: 30px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 11px;
+                color: #222222;
+                text-transform: uppercase;
+                font-weight: 100;
 
-				font-size: 11px;
-			}
-		}
+                .category-icon {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 10px;
+                    background-size: cover;
+                    border-radius: 50%;
+                }
+            }
 
-		.post-count {
-			position: absolute;
-			bottom: 5px;
-			right: 10px;
-			pointer-events: none;
-		}
+            &-title {
+                font-size: 22px;
+            }
+        }
 
-		.icon {
-			position: absolute;
-			bottom: 5px;
-			left: 10px;
-			pointer-events: none;
+        .topic-card-author {
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+            height: 32px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
 
-			width: 80%;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-			overflow: visible;
-
-			font-size: 20px;
-		}
-	}
+            &-avatar {
+                display: inline-block;
+                width: 32px !important;
+                height: 32px !important;
+                background-size: cover;
+                margin-right: 5px;
+                font-size: 1.5rem;
+                line-height: 32px;
+                vertical-align: middle;
+                border-radius: 50%;
+            }
+        }
+    }
 }
 
 .recent-cards.carousel-mode {
-	max-height: 110px;
-	overflow: hidden;
+    max-height: 220px;
+    overflow: hidden;
 }
