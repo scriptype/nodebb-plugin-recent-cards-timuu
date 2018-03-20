@@ -18,9 +18,9 @@ plugin.init = function(params, callback) {
 	app.get('/admin/plugins/recentcards', middleware.admin.buildHeader, renderAdmin);
 	app.get('/api/admin/plugins/recentcards', renderAdmin);
 
-	app.get('/plugins/nodebb-plugin-recent-cards/render', renderExternal);
-	app.get('/plugins/nodebb-plugin-recent-cards/render/style.css', renderExternalStyle);
-	app.get('/admin/plugins/nodebb-plugin-recent-cards/tests/external', testRenderExternal);
+	app.get('/plugins/nodebb-plugin-recent-cards-timuu/render', renderExternal);
+	app.get('/plugins/nodebb-plugin-recent-cards-timuu/render/style.css', renderExternalStyle);
+	app.get('/admin/plugins/nodebb-plugin-recent-cards-timuu/tests/external', testRenderExternal);
 
 	plugin.settings = new settings('recentcards', '1.0.0', defaultSettings);
 
@@ -54,18 +54,18 @@ function renderExternal(req, res, next) {
 			relative_path: nconf.get('url')
 		};
 
-		res.render('partials/nodebb-plugin-recent-cards/header', data.templateData);
+		res.render('partials/nodebb-plugin-recent-cards-timuu/header', data.templateData);
 	});
 }
 
 function renderExternalStyle(req, res, next) {
-	res.render('partials/nodebb-plugin-recent-cards/external/style', {
+	res.render('partials/nodebb-plugin-recent-cards-timuu/external/style', {
 		forumURL: nconf.get('url')
 	});
 }
 
 function testRenderExternal(req, res, next) {
-	res.render('admin/plugins/nodebb-plugin-recent-cards/tests/external', {
+	res.render('admin/plugins/nodebb-plugin-recent-cards-timuu/tests/external', {
 		forumURL: nconf.get('url')
 	});
 }
