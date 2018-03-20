@@ -161,7 +161,7 @@ function modifyCategoryTpl(callback) {
 	var fs = require('fs');
 	var path = require('path');
 	var tplPath = path.join(nconf.get('base_dir'), 'build/public/templates/categories.tpl');
-	var headerPath = path.join(nconf.get('base_dir'), 'node_modules/nodebb-plugin-recent-cards/static/templates/partials/nodebb-plugin-recent-cards/header.tpl');
+	var headerPath = path.join(nconf.get('base_dir'), 'node_modules/nodebb-plugin-recent-cards-timuu/static/templates/partials/nodebb-plugin-recent-cards/header.tpl');
 
 	async.parallel({
 		original: function(next) {
