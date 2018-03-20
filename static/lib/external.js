@@ -2,7 +2,7 @@
 /*global $*/
 
 $(document).ready(function(){
-	$.get(window.path_to_nodebb + '/plugins/nodebb-plugin-recent-cards/render', {}, function(html) {
+	$.get(window.path_to_nodebb + '/plugins/nodebb-plugin-recent-cards-timuu/render', {}, function(html) {
 		html = $(html);
 		if (html.length !== 5) {
 			return;
